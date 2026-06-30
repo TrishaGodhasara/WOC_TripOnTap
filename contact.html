@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TripOnTap Travels | PlanYourTrip</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="halloween.css" />
+  <script>(function(){try{if(localStorage.getItem("hw-theme")==="light"){document.documentElement.setAttribute("data-hw-theme","light");}}catch(e){}})();</script>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">TripOnTap</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="active">PlanYourTrip</a></li>
+           <li><a href="yourtripstillnow.html"> YourTrips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Plan your trip</h1>
+    <p class="section-subtitle">
+      Tell us what you’re dreaming of, and we’ll suggest an itinerary within 24 hours
+     .
+    </p>
+
+    <div class="two-column">
+      <section>
+        <form id="trip-form">
+          <div>
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+
+          <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div>
+            <label for="destination">Preferred destination</label>
+            <select id="destination" name="destination">
+              <option value="">Select...</option>
+              <option value="Goa">Goa</option>
+              <option value="Manali & Kasol">Manali &amp; Kasol</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Dubai">Dubai</option>
+              <option value="Bali">Bali</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="date">Approx. travel date</label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div>
+            <label for="people">Number of travelers</label>
+            <input type="text" id="people" name="people" placeholder="e.g. 2, 4, 6..." />
+          </div>
+<div>
+  <label for="age">Age</label>
+  <input type="number" id="age" name="age" placeholder="Enter your age" required />
+</div>
+
+<div>
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required />
+</div>
+
+<div>
+  <label for="address">Full Address</label>
+  <textarea id="address" name="address" placeholder="Enter your address"></textarea>
+</div>
+
+          <div>
+            <label for="message">Anything specific you want?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your budget, interests, etc."></textarea>
+          </div>
+
+          
+
+          <button type="submit" class="btn">Submit Request</button>
+        </form>
+      </section>
+
+      <aside class="highlight-box">
+        <h3>Contact details</h3>
+    
+        <ul class="feature-list">
+          <li>Email: hello@tripontap.com</li>
+          <li>Phone: +91-90000-00000</li>
+          <li>Instagram: @tripontap.travels</li>
+        </ul>
+       
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 TripOnTap Travels · Contact
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="halloween.js"></script>
+</body>
+</html>

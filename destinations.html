@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TripOnTap Travels | Destinations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="halloween.css" />
+  <script>(function(){try{if(localStorage.getItem("hw-theme")==="light"){document.documentElement.setAttribute("data-hw-theme","light");}}catch(e){}})();</script>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="navbar">
+      <div class="logo">TripOnTap</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="destinations.html" class="active">Destinations</a></li>
+          <li><a href="packages.html">Packages</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">PlanYourTrip</a></li>
+           <li><a href="yourtripstillnow.html"> YourTrips</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+
+    <h1 class="section-title">Explore Destinations</h1>
+    <p class="section-subtitle">
+      Discover beach holidays, mountain adventures, city breaks and international trips.
+    </p>
+
+    <!-- ===== SEARCH / SORT / FILTER TOOLBAR ===== -->
+    <div class="dest-toolbar">
+      <div class="dest-toolbar-row">
+        <div class="dest-search-wrap">
+          <span class="icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search a haunted hideaway... (e.g. Goa, Bali)"
+          />
+        </div>
+
+        <div class="dest-sort">
+          <label for="sortSelect">Sort by</label>
+          <select id="sortSelect">
+            <option value="default">Featured</option>
+            <option value="price-asc">Budget: Low → High</option>
+            <option value="price-desc">Budget: High → Low</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="dest-filters" id="typeFilters">
+        <button class="dest-chip active" data-type="all">🎃 All</button>
+        <button class="dest-chip" data-type="beach">🏖️ Beach</button>
+        <button class="dest-chip" data-type="mountains">🦇 Mountains</button>
+        <button class="dest-chip" data-type="nature">🍂 Nature</button>
+        <button class="dest-chip" data-type="city">🏙️ City</button>
+        <button class="dest-chip" data-type="adventure">🕯️ Adventure</button>
+        <button class="dest-chip" data-type="international">👻 International</button>
+      </div>
+
+      <div class="dest-filters" id="budgetFilters">
+        <button class="dest-chip active" data-budget="all">All Budgets</button>
+        <button class="dest-chip" data-budget="budget">🍬 Budget</button>
+        <button class="dest-chip" data-budget="mid">🕸️ Mid-range</button>
+        <button class="dest-chip" data-budget="luxury">🦇 Luxury</button>
+      </div>
+    </div>
+
+    <div class="dest-results-bar">
+      <span id="resultsCount">Showing 6 of 6 haunted hideaways</span>
+      <button id="resetFilters" type="button">Reset all filters</button>
+    </div>
+
+    <!-- ===== DESTINATION CARDS ===== -->
+    <section class="card-grid" id="cardGrid">
+
+      <!-- Goa -->
+      <article class="card" data-page="goa.html" data-type="beach" data-budget="budget" data-price="12000">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/fc/f0/goa.jpg?w=600&h=500&s=1" alt="Goa Beach">
+        <span class="chip">Beach</span><span class="dest-budget-tag">₹12,000 onwards</span>
+        <h3>Goa, India</h3>
+        <p>
+          Perfect for parties, relaxing beaches, Portuguese heritage and vibrant nightlife.
+        </p>
+        <p class="text-muted">Best time: Nov – Feb</p>
+      </article>
+
+      <!-- Manali -->
+      <article class="card" data-page="manali.html" data-type="mountains" data-budget="budget" data-price="14000">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7FDmYIua7on4iaLPy7ezPlS1wjbvsnEQTQ&s" alt="Manali Mountains">
+        <span class="chip">Mountains</span><span class="dest-budget-tag">₹14,000 onwards</span>
+        <h3>Manali & Kasol</h3>
+        <p>
+          Snowy mountains, river-side cafés, trekking routes and calm village life.
+        </p>
+        <p class="text-muted">Best time: Oct – Mar</p>
+      </article>
+
+      <!-- Kerala -->
+      <article class="card" data-page="kerela.html" data-type="nature" data-budget="mid" data-price="22000">
+        <img src="https://b3681537.smushcdn.com/3681537/wp-content/uploads/2020/02/best-time-to-visit-munnar-1-1024x640.jpg?lossy=2&strip=1&webp=1" alt="Kerala Backwaters">
+        <span class="chip">Nature</span><span class="dest-budget-tag">₹22,000 onwards</span>
+        <h3>Kerala</h3>
+        <p>
+          Lush green hills, houseboat stays, ayurveda therapy and peaceful landscapes.
+        </p>
+        <p class="text-muted">Best time: Sep – Mar</p>
+      </article>
+
+      <!-- Dubai -->
+      <article class="card" data-page="dubai.html" data-type="city" data-budget="luxury" data-price="55000">
+        <img src="https://blog.sothebysrealty.ae/hs-fs/hubfs/Imported_Blog_Media/Exploring%20the%20Wonders%20of%20Burj%20Khalifa-jpg-Oct-12-2025-09-51-47-1469-AM.jpg?width=1600&height=1067&name=Exploring%20the%20Wonders%20of%20Burj%20Khalifa-jpg-Oct-12-2025-09-51-47-1469-AM.jpg" alt="Dubai City">
+        <span class="chip">City</span><span class="dest-budget-tag">₹55,000 onwards</span>
+        <h3>Dubai</h3>
+        <p>
+          Luxury shopping, modern skyline, desert safari and world-class attractions.
+        </p>
+        <p class="text-muted">Best time: Nov – Mar</p>
+      </article>
+
+      <!-- Bali -->
+      <article class="card" data-page="bali.html" data-type="international" data-budget="mid" data-price="38000">
+        <img src="https://media.digitalnomads.world/wp-content/uploads/2021/01/20120709/bali-for-digital-nomads.jpg" alt="Bali Beach">
+        <span class="chip">International</span><span class="dest-budget-tag">₹38,000 onwards</span>
+        <h3>Bali, Indonesia</h3>
+        <p>
+          Tropical beaches, rice terraces, temples and budget-friendly cafés.
+        </p>
+        <p class="text-muted">Best time: Apr – Oct</p>
+      </article>
+
+      <!-- Switzerland -->
+      <article class="card" data-page="switzerland.html" data-type="adventure" data-budget="luxury" data-price="90000">
+        <img src="data:image/jpeg;base64,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" alt="Switzerland Alps">
+        <span class="chip">Adventure</span><span class="dest-budget-tag">₹90,000 onwards</span>
+        <h3>Switzerland</h3>
+        <p>
+          Snow-covered Alps, scenic train rides and picturesque European villages.
+        </p>
+        <p class="text-muted">Best time: Jun – Sep</p>
+      </article>
+
+    </section>
+
+    <div class="dest-empty" id="emptyState">
+      <span class="emoji">👻</span>
+      No hideaways match your search... try lifting a different curse.
+    </div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    © 2025 TripOnTap Travels · Destinations Page
+  </footer>
+
+  <script src="destinations.js"></script>
+  <script src="halloween.js"></script>
+</body>
+</html>

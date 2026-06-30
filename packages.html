@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TripOnTap | Packages</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="halloween.css" />
+  <script>(function(){try{if(localStorage.getItem("hw-theme")==="light"){document.documentElement.setAttribute("data-hw-theme","light");}}catch(e){}})();</script>
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <div class="logo">TripOnTap</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html" class="active">Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">PlanYourTrip</a></li>
+         <li><a href="yourtripstillnow.html"> YourTrips</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- PACKAGE CARDS -->
+  <section>
+    <div id="package-list" class="package-grid"></div>
+  </section>
+
+  <!-- DYNAMIC SECTION (OPENS BELOW CARDS) -->
+  <section id="dynamicSection" class="dynamic-section">
+
+    <!-- ITINERARY LOADS HERE -->
+    <div id="itinerarySection"></div>
+
+    <!-- BOOKING FORM LOADS HERE -->
+    <div id="bookingSection"></div>
+
+  </section>
+
+</main>
+
+<script src="packages.js"></script>
+  <script src="halloween.js"></script>
+</body>
+</html>

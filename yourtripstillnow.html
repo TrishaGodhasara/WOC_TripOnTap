@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="halloween.css" />
+  <script>(function(){try{if(localStorage.getItem("hw-theme")==="light"){document.documentElement.setAttribute("data-hw-theme","light");}}catch(e){}})();</script>
+
+    <title>Your Trips Till Now</title>
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">TripOnTap</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html" >Packages</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">PlanYourTrip</a></li>
+         <li><a href="yourtripstillnow.html" class="active"> YourTrips</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<h2>Your Trips Till Now</h2>
+<div id="tripContainer"></div>
+
+<script>
+const trips = JSON.parse(localStorage.getItem("trips")) || [];
+const container = document.getElementById("tripContainer");
+
+if (trips.length === 0) {
+    container.innerHTML = "<p class='no-trip-msg'>No trips saved yet.</p>";
+} else {
+
+    trips.forEach((trip, index) => {
+
+        container.innerHTML += `
+        <div class="trip-card" data-index="${index}">
+
+            <h3>Trip ${index + 1}</h3>
+
+            <p><strong>Form Type:</strong> ${trip.formType || ""}</p>
+            <p><strong>Name:</strong> ${trip.name || ""}</p>
+            <p><strong>Email:</strong> ${trip.email || ""}</p>
+            <p><strong>Destination:</strong> ${trip.destination || ""}</p>
+            <p><strong>Travel Date:</strong> ${trip.travelDate || trip.approxDate || ""}</p>
+            <p><strong>Number of Travelers:</strong> ${trip.people || ""}</p>
+            <p><strong>Age:</strong> ${trip.age || ""}</p>
+            <p><strong>Phone:</strong> ${trip.mobile || trip.phone || ""}</p>
+            <p><strong>Address:</strong> ${trip.address || ""}</p>
+            <p><strong>Message:</strong> ${trip.message || ""}</p>
+            <p><strong>Saved On:</strong> ${trip.createdAt || ""}</p>
+
+            <button class="deleteTripBtn" data-index="${index}">Delete Trip</button>
+
+        </div>
+        <hr>
+        `;
+    });
+
+    // attach delete functions AFTER HTML is inserted
+    document.querySelectorAll(".deleteTripBtn").forEach(button => {
+        button.addEventListener("click", function () {
+
+            const index = this.getAttribute("data-index");
+            let trips = JSON.parse(localStorage.getItem("trips")) || [];
+
+            trips.splice(index, 1); // delete 1 item at index
+
+            localStorage.setItem("trips", JSON.stringify(trips));
+
+            location.reload();
+        });
+    });
+}
+</script>
+
+
+  <script src="halloween.js"></script>
+</body>
+</html>
