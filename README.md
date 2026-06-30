@@ -36,9 +36,5 @@ npx serve .
 ```
 
 ## 📸 Preview
+<img width="1908" height="889" alt="image" src="https://github.com/user-attachments/assets/d0d787bf-038a-4ab7-a307-3847ef910c56" />
 
-_Add a screenshot or GIF here_
-
-## 📄 License
-
-MIT
